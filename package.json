@@ -1,0 +1,44 @@
+{
+  "name": "3d-experiment",
+  "version": "0.0.1",
+  "main": "index.html",
+  "scripts": {
+    "postinstall": "webpack && npm test && npm run lint:script",
+    "build": "webpack",
+    "watch": "webpack --progress --watch",
+    "test": "ts-node node_modules/tape/bin/tape ./tests/index.tsx | colortape",
+    "lint:script": "tslint -c './tslint.json' './src/js/**/*.ts?(x)'"
+  },
+  "author": "Christian Heyn",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/christianheyn/react-typescript-basic.git"
+  },
+  "keywords": [
+    "basic",
+    "react",
+    "typescript",
+    "start",
+    "base"
+  ],
+  "devDependencies": {
+    "@types/react": "^15.0.12",
+    "@types/react-dom": "^0.14.23",
+    "@types/tape": "^4.2.29",
+    "@types/three": "^0.84.1",
+    "colortape": "^0.1.2",
+    "tape": "^4.6.3",
+    "ts-loader": "^2.0.1",
+    "ts-node": "^2.1.0",
+    "tslint": "^4.4.2",
+    "tslint-react": "^2.4.0",
+    "typescript": "^2.2.1",
+    "webpack": "^2.2.1"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "three": "^0.84.0"
+  }
+}
