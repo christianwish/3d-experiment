@@ -5,6 +5,7 @@
   "scripts": {
     "postinstall": "webpack && npm test && npm run lint:script",
     "build": "webpack",
+    "start": "webpack-dev-server --inline --content-base .",
     "watch": "webpack --progress --watch",
     "test": "ts-node node_modules/tape/bin/tape ./tests/index.tsx | colortape",
     "lint:script": "tslint -c './tslint.json' './src/js/**/*.ts?(x)'"
@@ -13,7 +14,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/christianheyn/react-typescript-basic.git"
+    "url": "https://github.com/christianheyn/3d-experiment.git"
   },
   "keywords": [
     "basic",
@@ -28,15 +29,20 @@
     "@types/tape": "^4.2.29",
     "@types/three": "^0.84.1",
     "colortape": "^0.1.2",
+    "css-loader": "^0.27.1",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "style-loader": "^0.13.2",
     "tape": "^4.6.3",
     "ts-loader": "^2.0.1",
     "ts-node": "^2.1.0",
     "tslint": "^4.4.2",
     "tslint-react": "^2.4.0",
     "typescript": "^2.2.1",
-    "webpack": "^2.2.1"
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
   },
   "dependencies": {
+    "normalize.css": "^5.0.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "three": "^0.84.0"
